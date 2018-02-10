@@ -7,25 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B30FEAB1AC0A7D78CCDAC9F /* libPods-Ticket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5060761976735C16E72207AA /* libPods-Ticket.a */; };
+		AC02CE8C3849B6C10464CD2F /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC02C6E0A206DB6B1F6FE35F /* DataManager.m */; };
+		AE1F8E6A2026406D00AF637F /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = AE1F8E672026406C00AF637F /* cities.json */; };
+		AE1F8E6B2026406D00AF637F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = AE1F8E682026406C00AF637F /* airports.json */; };
+		AE1F8E6C2026406D00AF637F /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = AE1F8E692026406C00AF637F /* countries.json */; };
+		AE3965EF2023903100816595 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3965EE2023903100816595 /* City.m */; };
+		AE3965F220239FA900816595 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3965F120239FA900816595 /* Airport.m */; };
+		AE39EBAE20238E32004D1D56 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39EBAD20238E32004D1D56 /* Country.m */; };
+		AE6B5A7A202F21F6008224D9 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A79202F21F6008224D9 /* LocationService.m */; };
+		AE6B5A7D202F270C008224D9 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A7C202F270C008224D9 /* MapPrice.m */; };
+		AE6B5A80202F411F008224D9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A7F202F411F008224D9 /* MapViewController.m */; };
+		AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4A202AF31C00F8B9A8 /* Ticket.m */; };
+		AE83ED4E202B2CA600F8B9A8 /* TicketTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */; };
+		AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED50202B440800F8B9A8 /* TicketsViewController.m */; };
+		AE8648522026E63C00D72B37 /* PlaceTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8648512026E63C00D72B37 /* PlaceTVCell.m */; };
+		AE864857202AD5AA00D72B37 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE864856202AD5AA00D72B37 /* APIManager.m */; };
 		AE9D792A2023423B00CE8AE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D79292023423B00CE8AE8 /* AppDelegate.m */; };
-		AE9D792D2023423B00CE8AE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D792C2023423B00CE8AE8 /* ViewController.m */; };
+		AE9D792D2023423B00CE8AE8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D792C2023423B00CE8AE8 /* MainViewController.m */; };
 		AE9D79302023423B00CE8AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D792E2023423B00CE8AE8 /* Main.storyboard */; };
 		AE9D79322023423B00CE8AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D79312023423B00CE8AE8 /* Assets.xcassets */; };
 		AE9D79352023423B00CE8AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D79332023423B00CE8AE8 /* LaunchScreen.storyboard */; };
 		AE9D79382023423C00CE8AE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D79372023423C00CE8AE8 /* main.m */; };
+		AE9D79402023449700CE8AE8 /* RootNavigatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D793F2023449700CE8AE8 /* RootNavigatorController.m */; };
+		AE9D79462023487400CE8AE8 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D79452023487400CE8AE8 /* PlaceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5060761976735C16E72207AA /* libPods-Ticket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ticket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C78A67492C9923D72FD25A /* Pods-Ticket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ticket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ticket/Pods-Ticket.release.xcconfig"; sourceTree = "<group>"; };
+		AC02C6E0A206DB6B1F6FE35F /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		AC02C76241DC0644977161F6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		AE1F8E672026406C00AF637F /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		AE1F8E682026406C00AF637F /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
+		AE1F8E692026406C00AF637F /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		AE3965ED2023903100816595 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		AE3965EE2023903100816595 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		AE3965F020239FA900816595 /* Airport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
+		AE3965F120239FA900816595 /* Airport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
+		AE39EBAC20238E32004D1D56 /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		AE39EBAD20238E32004D1D56 /* Country.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		AE6B5A78202F21F6008224D9 /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
+		AE6B5A79202F21F6008224D9 /* LocationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
+		AE6B5A7B202F270C008224D9 /* MapPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPrice.h; sourceTree = "<group>"; };
+		AE6B5A7C202F270C008224D9 /* MapPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
+		AE6B5A7E202F411F008224D9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		AE6B5A7F202F411F008224D9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AE83ED49202AF31C00F8B9A8 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		AE83ED4A202AF31C00F8B9A8 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		AE83ED4C202B2CA600F8B9A8 /* TicketTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketTVCell.h; sourceTree = "<group>"; };
+		AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketTVCell.m; sourceTree = "<group>"; };
+		AE83ED4F202B440800F8B9A8 /* TicketsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketsViewController.h; sourceTree = "<group>"; };
+		AE83ED50202B440800F8B9A8 /* TicketsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketsViewController.m; sourceTree = "<group>"; };
+		AE86484D202649F400D72B37 /* SearchRequestStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchRequestStruct.h; sourceTree = "<group>"; };
+		AE8648502026E63C00D72B37 /* PlaceTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceTVCell.h; sourceTree = "<group>"; };
+		AE8648512026E63C00D72B37 /* PlaceTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceTVCell.m; sourceTree = "<group>"; };
+		AE864855202AD5AA00D72B37 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		AE864856202AD5AA00D72B37 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		AE9D79252023423B00CE8AE8 /* Ticket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D79282023423B00CE8AE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE9D79292023423B00CE8AE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AE9D792B2023423B00CE8AE8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AE9D792C2023423B00CE8AE8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE9D792B2023423B00CE8AE8 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AE9D792C2023423B00CE8AE8 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		AE9D792F2023423B00CE8AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE9D79312023423B00CE8AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE9D79342023423B00CE8AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE9D79362023423B00CE8AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9D79372023423C00CE8AE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE9D793E2023449700CE8AE8 /* RootNavigatorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigatorController.h; sourceTree = "<group>"; };
+		AE9D793F2023449700CE8AE8 /* RootNavigatorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigatorController.m; sourceTree = "<group>"; };
+		AE9D79442023487400CE8AE8 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		AE9D79452023487400CE8AE8 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		E709FDF8AD3027AE635EF96C /* Pods-Ticket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ticket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ticket/Pods-Ticket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +86,135 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B30FEAB1AC0A7D78CCDAC9F /* libPods-Ticket.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58F22A8625D75DBC5B53E358 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5060761976735C16E72207AA /* libPods-Ticket.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC02CFA4F9949F0B8988C6FB /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				AC02C76241DC0644977161F6 /* DataManager.h */,
+				AC02C6E0A206DB6B1F6FE35F /* DataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		AE39EBAF20238E39004D1D56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE86484D202649F400D72B37 /* SearchRequestStruct.h */,
+				AE39EBAC20238E32004D1D56 /* Country.h */,
+				AE39EBAD20238E32004D1D56 /* Country.m */,
+				AE3965ED2023903100816595 /* City.h */,
+				AE3965EE2023903100816595 /* City.m */,
+				AE3965F020239FA900816595 /* Airport.h */,
+				AE3965F120239FA900816595 /* Airport.m */,
+				AE83ED49202AF31C00F8B9A8 /* Ticket.h */,
+				AE83ED4A202AF31C00F8B9A8 /* Ticket.m */,
+				AE6B5A7B202F270C008224D9 /* MapPrice.h */,
+				AE6B5A7C202F270C008224D9 /* MapPrice.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE6B5A76202F21B4008224D9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B5A77202F21D7008224D9 /* Location */,
+				AC02CFA4F9949F0B8988C6FB /* DataManager */,
+				AE864854202AD57C00D72B37 /* API */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE6B5A77202F21D7008224D9 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B5A78202F21F6008224D9 /* LocationService.h */,
+				AE6B5A79202F21F6008224D9 /* LocationService.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		AE86484C2026413700D72B37 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AE1F8E682026406C00AF637F /* airports.json */,
+				AE1F8E672026406C00AF637F /* cities.json */,
+				AE1F8E692026406C00AF637F /* countries.json */,
+			);
+			name = Data;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AE86484E2026E5C200D72B37 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D79442023487400CE8AE8 /* PlaceViewController.h */,
+				AE9D79452023487400CE8AE8 /* PlaceViewController.m */,
+				AE9D793E2023449700CE8AE8 /* RootNavigatorController.h */,
+				AE9D793F2023449700CE8AE8 /* RootNavigatorController.m */,
+				AE9D792B2023423B00CE8AE8 /* MainViewController.h */,
+				AE9D792C2023423B00CE8AE8 /* MainViewController.m */,
+				AE83ED4F202B440800F8B9A8 /* TicketsViewController.h */,
+				AE83ED50202B440800F8B9A8 /* TicketsViewController.m */,
+				AE6B5A7E202F411F008224D9 /* MapViewController.h */,
+				AE6B5A7F202F411F008224D9 /* MapViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AE86484F2026E5E000D72B37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D79282023423B00CE8AE8 /* AppDelegate.h */,
+				AE9D79292023423B00CE8AE8 /* AppDelegate.m */,
+				AE9D792E2023423B00CE8AE8 /* Main.storyboard */,
+				AE9D79312023423B00CE8AE8 /* Assets.xcassets */,
+				AE9D79332023423B00CE8AE8 /* LaunchScreen.storyboard */,
+				AE9D79372023423C00CE8AE8 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE8648532026E64100D72B37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE8648502026E63C00D72B37 /* PlaceTVCell.h */,
+				AE8648512026E63C00D72B37 /* PlaceTVCell.m */,
+				AE83ED4C202B2CA600F8B9A8 /* TicketTVCell.h */,
+				AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE864854202AD57C00D72B37 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AE864855202AD5AA00D72B37 /* APIManager.h */,
+				AE864856202AD5AA00D72B37 /* APIManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		AE9D791C2023423B00CE8AE8 = {
 			isa = PBXGroup;
 			children = (
 				AE9D79272023423B00CE8AE8 /* Ticket */,
 				AE9D79262023423B00CE8AE8 /* Products */,
+				DBA4B97C3364393B097EEC0D /* Pods */,
+				58F22A8625D75DBC5B53E358 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +229,24 @@
 		AE9D79272023423B00CE8AE8 /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
-				AE9D79282023423B00CE8AE8 /* AppDelegate.h */,
-				AE9D79292023423B00CE8AE8 /* AppDelegate.m */,
-				AE9D792B2023423B00CE8AE8 /* ViewController.h */,
-				AE9D792C2023423B00CE8AE8 /* ViewController.m */,
-				AE9D792E2023423B00CE8AE8 /* Main.storyboard */,
-				AE9D79312023423B00CE8AE8 /* Assets.xcassets */,
-				AE9D79332023423B00CE8AE8 /* LaunchScreen.storyboard */,
+				AE6B5A76202F21B4008224D9 /* Service */,
 				AE9D79362023423B00CE8AE8 /* Info.plist */,
-				AE9D79372023423C00CE8AE8 /* main.m */,
+				AE86484E2026E5C200D72B37 /* Controllers */,
+				AE86484F2026E5E000D72B37 /* Supporting Files */,
+				AE86484C2026413700D72B37 /* Data */,
+				AE39EBAF20238E39004D1D56 /* Models */,
+				AE8648532026E64100D72B37 /* Views */,
 			);
 			path = Ticket;
+			sourceTree = "<group>";
+		};
+		DBA4B97C3364393B097EEC0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E709FDF8AD3027AE635EF96C /* Pods-Ticket.debug.xcconfig */,
+				91C78A67492C9923D72FD25A /* Pods-Ticket.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE9D793B2023423C00CE8AE8 /* Build configuration list for PBXNativeTarget "Ticket" */;
 			buildPhases = (
+				5FCA1FCA198A09ABFDEDF31A /* [CP] Check Pods Manifest.lock */,
 				AE9D79212023423B00CE8AE8 /* Sources */,
 				AE9D79222023423B00CE8AE8 /* Frameworks */,
 				AE9D79232023423B00CE8AE8 /* Resources */,
+				012D741494DC0E840152314A /* [CP] Embed Pods Frameworks */,
+				F5747DD35A416FCB36807669 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,22 +310,90 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1F8E6C2026406D00AF637F /* countries.json in Resources */,
+				AE1F8E6A2026406D00AF637F /* cities.json in Resources */,
 				AE9D79352023423B00CE8AE8 /* LaunchScreen.storyboard in Resources */,
 				AE9D79322023423B00CE8AE8 /* Assets.xcassets in Resources */,
 				AE9D79302023423B00CE8AE8 /* Main.storyboard in Resources */,
+				AE1F8E6B2026406D00AF637F /* airports.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		012D741494DC0E840152314A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ticket/Pods-Ticket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FCA1FCA198A09ABFDEDF31A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ticket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5747DD35A416FCB36807669 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ticket/Pods-Ticket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE9D79212023423B00CE8AE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE9D792D2023423B00CE8AE8 /* ViewController.m in Sources */,
+				AE83ED4E202B2CA600F8B9A8 /* TicketTVCell.m in Sources */,
+				AE6B5A7A202F21F6008224D9 /* LocationService.m in Sources */,
+				AE9D792D2023423B00CE8AE8 /* MainViewController.m in Sources */,
 				AE9D79382023423C00CE8AE8 /* main.m in Sources */,
+				AE9D79462023487400CE8AE8 /* PlaceViewController.m in Sources */,
 				AE9D792A2023423B00CE8AE8 /* AppDelegate.m in Sources */,
+				AE6B5A7D202F270C008224D9 /* MapPrice.m in Sources */,
+				AE39EBAE20238E32004D1D56 /* Country.m in Sources */,
+				AE3965F220239FA900816595 /* Airport.m in Sources */,
+				AE6B5A80202F411F008224D9 /* MapViewController.m in Sources */,
+				AE3965EF2023903100816595 /* City.m in Sources */,
+				AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */,
+				AE8648522026E63C00D72B37 /* PlaceTVCell.m in Sources */,
+				AE9D79402023449700CE8AE8 /* RootNavigatorController.m in Sources */,
+				AC02CE8C3849B6C10464CD2F /* DataManager.m in Sources */,
+				AE864857202AD5AA00D72B37 /* APIManager.m in Sources */,
+				AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +525,11 @@
 		};
 		AE9D793C2023423C00CE8AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E709FDF8AD3027AE635EF96C /* Pods-Ticket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.Ticket;
@@ -289,9 +540,11 @@
 		};
 		AE9D793D2023423C00CE8AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91C78A67492C9923D72FD25A /* Pods-Ticket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.Ticket;

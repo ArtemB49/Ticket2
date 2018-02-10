@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootNavigatorController.h
 //  Ticket
 //
 //  Created by Артем Б on 01.02.2018.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RootNavigatorController : UINavigationController
 
 @end
-
