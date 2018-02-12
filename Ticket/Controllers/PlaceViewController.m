@@ -10,12 +10,16 @@
 #import "DataManager.h"
 #import "PlaceTVCell.h"
 
-@interface PlaceViewController ()
+#define ReuseIdentifier @"CellIdentifier"
+
+@interface PlaceViewController ()<UISearchResultsUpdating>
 
 @property (nonatomic) PlaceType placeType;
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) UISegmentedControl* segmentedControl;
 @property (nonatomic, strong) NSArray* currentArray;
+@property (nonatomic, strong) NSArray* searchArray;
+@property (nonatomic, strong) UISearchController* searchController;
 
 @end
 
@@ -33,9 +37,20 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     
+    _searchController = [[UISearchController alloc] initWithSearchResultsController: nil];
+    _searchController.dimsBackgroundDuringPresentation = false;
+    _searchController.searchResultsUpdater = self;
+    _searchArray = [NSArray new];
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    if (@available(iOS 11.0, *)){
+        self.navigationItem.searchController = _searchController;
+    } else {
+        _tableView.tableHeaderView = _searchController.searchBar;
+    }
     [self.view addSubview: self.tableView];
     
     self.segmentedControl = [[UISegmentedControl alloc] initWithItems: @[@"Города", @"Аэропорты"]];
@@ -71,22 +86,29 @@
 #pragma mark - TableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  self.currentArray.count;
+    if (_searchController.isActive && [_searchArray count] > 0){
+        return self.searchArray.count;
+    } else {
+        return  self.currentArray.count;
+    }
+    
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PlaceTVCell* cell = [tableView dequeueReusableCellWithIdentifier: NSLocaleIdentifier];
+    PlaceTVCell* cell = [tableView dequeueReusableCellWithIdentifier: ReuseIdentifier];
     if (!cell) {
-        cell = [[PlaceTVCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: NSLocaleIdentifier];
+        cell = [[PlaceTVCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: ReuseIdentifier];
         
     }
 
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        City* city = [self.currentArray objectAtIndex: indexPath.row];
+        City* city = (self.searchController.isActive && self.searchArray.count > 0)?
+        [_searchArray objectAtIndex:indexPath.row]:[self.currentArray objectAtIndex: indexPath.row];
         cell.leftLabel.text = city.name;
         cell.rightLabel.text = city.code;
     } else if (self.segmentedControl.selectedSegmentIndex == 1){
-        Airport* airport = [self.currentArray objectAtIndex: indexPath.row];
+        Airport* airport = (self.searchController.isActive && self.searchArray.count > 0)?
+        [_searchArray objectAtIndex:indexPath.row]:[self.currentArray objectAtIndex: indexPath.row];
         cell.leftLabel.text = airport.name;
         cell.rightLabel.text = airport.code;
     }
@@ -100,8 +122,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     DataSourceType dataType = ((int) self.segmentedControl.selectedSegmentIndex) + 1;
-    [self.delegate selectPlace:[self.currentArray objectAtIndex: indexPath.row] withType:self.placeType andDataType:dataType];
+    if (self.searchController.isActive && self.searchArray.count > 0){
+        [self.delegate selectPlace:[self.searchArray objectAtIndex: indexPath.row] withType:self.placeType andDataType:dataType];
+    } else {
+        [self.delegate selectPlace:[self.currentArray objectAtIndex: indexPath.row] withType:self.placeType andDataType:dataType];
+    }
     [self.navigationController popViewControllerAnimated:true];
+}
+
+#pragma mark - UISearchResultUpdating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    if (searchController.searchBar.text){
+        NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF.name CONTAINS[cd]%@", searchController.searchBar.text];
+        _searchArray = [_currentArray filteredArrayUsingPredicate:predicate];
+        [_tableView reloadData];
+    }
 }
 
 

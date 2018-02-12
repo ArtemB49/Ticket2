@@ -11,7 +11,7 @@
 #import "SearchRequestStruct.h"
 #import "MapPrice.h"
 
-#define API_TOKEN @""
+#define API_TOKEN @"4d3676bb6f6a3ef16eaa303b496f796c"
 #define API_URL_IP_ADDRESS @"https://api.ipify.org/?format=json"
 #define API_URL_CHEAP @"https://api.travelpayouts.com/v1/prices/cheap"
 #define API_URL_CITY_FROM_IP @"https://www.travelpayouts.com/whereami?ip="

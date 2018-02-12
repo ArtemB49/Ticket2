@@ -31,22 +31,22 @@
         self.contentView.layer.cornerRadius = 6.0;
         self.contentView.backgroundColor = [UIColor whiteColor];
         
-        self.priceLabel = [[UILabel alloc] initWithFrame: self.bounds];
-        self.priceLabel.font = [UIFont systemFontOfSize:24.0 weight:UIFontWeightBold];
-        [self.contentView addSubview: self.priceLabel];
+        _priceLabel = [[UILabel alloc] initWithFrame: self.bounds];
+        _priceLabel.font = [UIFont systemFontOfSize:24.0 weight:UIFontWeightBold];
+        [self.contentView addSubview: _priceLabel];
         
-        self.airlineLogoView = [[UIImageView alloc] initWithFrame: self.bounds];
-        self.airlineLogoView.contentMode = UIViewContentModeScaleAspectFit;
-        [self.contentView addSubview: self.airlineLogoView];
+        _airlineLogoView = [[UIImageView alloc] initWithFrame: self.bounds];
+        _airlineLogoView.contentMode = UIViewContentModeScaleAspectFit;
+        [self.contentView addSubview: _airlineLogoView];
         
-        self.placesLabel = [[UILabel alloc] initWithFrame: self.bounds];
-        self.placesLabel.font = [UIFont systemFontOfSize: 15.0 weight: UIFontWeightLight];
-        self.placesLabel.textColor = [UIColor darkGrayColor];
-        [self.contentView addSubview: self.placesLabel];
+        _placesLabel = [[UILabel alloc] initWithFrame: self.bounds];
+        _placesLabel.font = [UIFont systemFontOfSize: 15.0 weight: UIFontWeightLight];
+        _placesLabel.textColor = [UIColor darkGrayColor];
+        [self.contentView addSubview: _placesLabel];
         
-        self.dateLabel = [[UILabel alloc] initWithFrame: self.bounds];
-        self.dateLabel.font = [UIFont systemFontOfSize: 15.0 weight: UIFontWeightRegular];
-        [self.contentView addSubview: self.dateLabel];
+        _dateLabel = [[UILabel alloc] initWithFrame: self.bounds];
+        _dateLabel.font = [UIFont systemFontOfSize: 15.0 weight: UIFontWeightRegular];
+        [self.contentView addSubview: _dateLabel];
     }
     return self;
 }
@@ -55,10 +55,10 @@
     [super layoutSubviews];
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     self.contentView.frame = CGRectMake(10.0, 10.0, screenWidth - 20.0, self.frame.size.height - 20.0);
-    self.priceLabel.frame = CGRectMake(10.0, 10.0, self.contentView.frame.size.width - 110.0, 40.0);
-    self.airlineLogoView.frame = CGRectMake(CGRectGetMaxX(self.priceLabel.frame) + 10.0, 10.0, 80.0, 80.0);
-    self.placesLabel.frame = CGRectMake(10.0, CGRectGetMaxX(self.priceLabel.frame) +16.0, 100.0, 20.0);
-    self.dateLabel.frame = CGRectMake(10.0, CGRectGetMaxX(self.placesLabel.frame) + 8.0, self.contentView.frame.size.width - 20.0, 20.0);
+    _priceLabel.frame = CGRectMake(10.0, 10.0, self.contentView.frame.size.width - 110.0, 40.0);
+    _airlineLogoView.frame = CGRectMake(CGRectGetMaxX(_priceLabel.frame) + 10.0, 10.0, 80.0, 80.0);
+    _placesLabel.frame = CGRectMake(10.0, CGRectGetMaxY(_priceLabel.frame) + 16.0, 100.0, 20.0);
+    _dateLabel.frame = CGRectMake(10.0, CGRectGetMaxY(_placesLabel.frame) + 8.0, self.contentView.frame.size.width - 20.0, 20.0);
 }
 
 - (void)setTicket:(Ticket *)ticket{

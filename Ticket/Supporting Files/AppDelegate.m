@@ -7,17 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "RootNavigatorController.h"
-#import "MainViewController.h"
-#import "MapViewController.h"
+#import "TabBarController.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate{
-    RootNavigatorController* rootNavigator;
-}
+@implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -25,15 +21,9 @@
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame: windowFrame];
     
-    MapViewController* mapVC = [MapViewController new];
+    TabBarController* tabBarController = [TabBarController new];
     
-//    MainViewController* mainVC = [MainViewController new];
-    
-    rootNavigator = [[RootNavigatorController alloc] initWithRootViewController:mapVC];
-    
-    
-    
-    self.window.rootViewController = rootNavigator;
+    self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
     

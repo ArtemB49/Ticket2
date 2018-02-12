@@ -18,6 +18,7 @@
 		AE6B5A7A202F21F6008224D9 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A79202F21F6008224D9 /* LocationService.m */; };
 		AE6B5A7D202F270C008224D9 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A7C202F270C008224D9 /* MapPrice.m */; };
 		AE6B5A80202F411F008224D9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A7F202F411F008224D9 /* MapViewController.m */; };
+		AE6B5A832030BDBD008224D9 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A822030BDBD008224D9 /* TabBarController.m */; };
 		AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4A202AF31C00F8B9A8 /* Ticket.m */; };
 		AE83ED4E202B2CA600F8B9A8 /* TicketTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */; };
 		AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED50202B440800F8B9A8 /* TicketsViewController.m */; };
@@ -29,7 +30,6 @@
 		AE9D79322023423B00CE8AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D79312023423B00CE8AE8 /* Assets.xcassets */; };
 		AE9D79352023423B00CE8AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D79332023423B00CE8AE8 /* LaunchScreen.storyboard */; };
 		AE9D79382023423C00CE8AE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D79372023423C00CE8AE8 /* main.m */; };
-		AE9D79402023449700CE8AE8 /* RootNavigatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D793F2023449700CE8AE8 /* RootNavigatorController.m */; };
 		AE9D79462023487400CE8AE8 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D79452023487400CE8AE8 /* PlaceViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +53,8 @@
 		AE6B5A7C202F270C008224D9 /* MapPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
 		AE6B5A7E202F411F008224D9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		AE6B5A7F202F411F008224D9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AE6B5A812030BDBD008224D9 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		AE6B5A822030BDBD008224D9 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		AE83ED49202AF31C00F8B9A8 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		AE83ED4A202AF31C00F8B9A8 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		AE83ED4C202B2CA600F8B9A8 /* TicketTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketTVCell.h; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		AE9D79342023423B00CE8AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE9D79362023423B00CE8AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9D79372023423C00CE8AE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AE9D793E2023449700CE8AE8 /* RootNavigatorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigatorController.h; sourceTree = "<group>"; };
-		AE9D793F2023449700CE8AE8 /* RootNavigatorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigatorController.m; sourceTree = "<group>"; };
 		AE9D79442023487400CE8AE8 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		AE9D79452023487400CE8AE8 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		E709FDF8AD3027AE635EF96C /* Pods-Ticket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ticket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ticket/Pods-Ticket.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,14 +163,14 @@
 			children = (
 				AE9D79442023487400CE8AE8 /* PlaceViewController.h */,
 				AE9D79452023487400CE8AE8 /* PlaceViewController.m */,
-				AE9D793E2023449700CE8AE8 /* RootNavigatorController.h */,
-				AE9D793F2023449700CE8AE8 /* RootNavigatorController.m */,
 				AE9D792B2023423B00CE8AE8 /* MainViewController.h */,
 				AE9D792C2023423B00CE8AE8 /* MainViewController.m */,
 				AE83ED4F202B440800F8B9A8 /* TicketsViewController.h */,
 				AE83ED50202B440800F8B9A8 /* TicketsViewController.m */,
 				AE6B5A7E202F411F008224D9 /* MapViewController.h */,
 				AE6B5A7F202F411F008224D9 /* MapViewController.m */,
+				AE6B5A812030BDBD008224D9 /* TabBarController.h */,
+				AE6B5A822030BDBD008224D9 /* TabBarController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -380,6 +380,7 @@
 				AE83ED4E202B2CA600F8B9A8 /* TicketTVCell.m in Sources */,
 				AE6B5A7A202F21F6008224D9 /* LocationService.m in Sources */,
 				AE9D792D2023423B00CE8AE8 /* MainViewController.m in Sources */,
+				AE6B5A832030BDBD008224D9 /* TabBarController.m in Sources */,
 				AE9D79382023423C00CE8AE8 /* main.m in Sources */,
 				AE9D79462023487400CE8AE8 /* PlaceViewController.m in Sources */,
 				AE9D792A2023423B00CE8AE8 /* AppDelegate.m in Sources */,
@@ -390,7 +391,6 @@
 				AE3965EF2023903100816595 /* City.m in Sources */,
 				AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */,
 				AE8648522026E63C00D72B37 /* PlaceTVCell.m in Sources */,
-				AE9D79402023449700CE8AE8 /* RootNavigatorController.m in Sources */,
 				AC02CE8C3849B6C10464CD2F /* DataManager.m in Sources */,
 				AE864857202AD5AA00D72B37 /* APIManager.m in Sources */,
 				AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */,
@@ -529,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DY58N6J6Q3;
 				INFOPLIST_FILE = Ticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.Ticket;
@@ -544,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DY58N6J6Q3;
 				INFOPLIST_FILE = Ticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.Ticket;
