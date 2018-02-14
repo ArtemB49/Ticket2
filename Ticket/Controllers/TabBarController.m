@@ -9,6 +9,7 @@
 #import "TabBarController.h"
 #import "MainViewController.h"
 #import "MapViewController.h"
+#import "TicketCollectionViewController.h"
 
 @interface TabBarController ()
 
@@ -40,6 +41,8 @@
     mapVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта цен" image:[UIImage imageNamed:@"map"] selectedImage:[UIImage imageNamed:@"map_selected"]];
     UINavigationController* mapNavController = [[UINavigationController alloc] initWithRootViewController: mapVC];
     [controllers addObject: mapNavController];
+    
+
     
     return controllers;
     

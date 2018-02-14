@@ -19,6 +19,8 @@
 		AE6B5A7D202F270C008224D9 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A7C202F270C008224D9 /* MapPrice.m */; };
 		AE6B5A80202F411F008224D9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A7F202F411F008224D9 /* MapViewController.m */; };
 		AE6B5A832030BDBD008224D9 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A822030BDBD008224D9 /* TabBarController.m */; };
+		AE6B5A872031DBC2008224D9 /* TicketCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A862031DBC2008224D9 /* TicketCollectionViewController.m */; };
+		AE6B5A8A2031ECC7008224D9 /* TicketCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A892031ECC7008224D9 /* TicketCollectionViewCell.m */; };
 		AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4A202AF31C00F8B9A8 /* Ticket.m */; };
 		AE83ED4E202B2CA600F8B9A8 /* TicketTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */; };
 		AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED50202B440800F8B9A8 /* TicketsViewController.m */; };
@@ -55,6 +57,10 @@
 		AE6B5A7F202F411F008224D9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		AE6B5A812030BDBD008224D9 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		AE6B5A822030BDBD008224D9 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		AE6B5A852031DBC2008224D9 /* TicketCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketCollectionViewController.h; sourceTree = "<group>"; };
+		AE6B5A862031DBC2008224D9 /* TicketCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketCollectionViewController.m; sourceTree = "<group>"; };
+		AE6B5A882031ECC7008224D9 /* TicketCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketCollectionViewCell.h; sourceTree = "<group>"; };
+		AE6B5A892031ECC7008224D9 /* TicketCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketCollectionViewCell.m; sourceTree = "<group>"; };
 		AE83ED49202AF31C00F8B9A8 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		AE83ED4A202AF31C00F8B9A8 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		AE83ED4C202B2CA600F8B9A8 /* TicketTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketTVCell.h; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 				AE6B5A7F202F411F008224D9 /* MapViewController.m */,
 				AE6B5A812030BDBD008224D9 /* TabBarController.h */,
 				AE6B5A822030BDBD008224D9 /* TabBarController.m */,
+				AE6B5A852031DBC2008224D9 /* TicketCollectionViewController.h */,
+				AE6B5A862031DBC2008224D9 /* TicketCollectionViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +203,8 @@
 				AE8648512026E63C00D72B37 /* PlaceTVCell.m */,
 				AE83ED4C202B2CA600F8B9A8 /* TicketTVCell.h */,
 				AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */,
+				AE6B5A882031ECC7008224D9 /* TicketCollectionViewCell.h */,
+				AE6B5A892031ECC7008224D9 /* TicketCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,9 +392,11 @@
 				AE9D792D2023423B00CE8AE8 /* MainViewController.m in Sources */,
 				AE6B5A832030BDBD008224D9 /* TabBarController.m in Sources */,
 				AE9D79382023423C00CE8AE8 /* main.m in Sources */,
+				AE6B5A8A2031ECC7008224D9 /* TicketCollectionViewCell.m in Sources */,
 				AE9D79462023487400CE8AE8 /* PlaceViewController.m in Sources */,
 				AE9D792A2023423B00CE8AE8 /* AppDelegate.m in Sources */,
 				AE6B5A7D202F270C008224D9 /* MapPrice.m in Sources */,
+				AE6B5A872031DBC2008224D9 /* TicketCollectionViewController.m in Sources */,
 				AE39EBAE20238E32004D1D56 /* Country.m in Sources */,
 				AE3965F220239FA900816595 /* Airport.m in Sources */,
 				AE6B5A80202F411F008224D9 /* MapViewController.m in Sources */,

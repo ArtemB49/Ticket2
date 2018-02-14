@@ -11,6 +11,7 @@
 #import "PlaceViewController.h"
 #import "SearchRequestStruct.h"
 #import "TicketsViewController.h"
+#import "TicketCollectionViewController.h"
 #import "APIManager.h"
 
 @interface MainViewController ()<PlaceViewControllerDelegate>
@@ -90,7 +91,8 @@
 - (void)searchButtonDidTap:(UIButton*)sender{
     [[APIManager sharedInstance] ticketsWithRequest:self.searchRequest withCompletion:^(NSArray *tickets) {
         if (tickets.count > 0) {
-            TicketsViewController *ticketsVC = [[TicketsViewController alloc] initWithTickets: tickets];
+            UICollectionViewFlowLayout* flowLayout = [UICollectionViewFlowLayout new];
+            TicketCollectionViewController *ticketsVC = [[TicketCollectionViewController alloc] initWithTickets: tickets andCollectionViewLayout: flowLayout];
             [self.navigationController showViewController:ticketsVC sender:self];
         } else {
             UIAlertController* alertController =
