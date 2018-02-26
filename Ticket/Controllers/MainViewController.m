@@ -12,6 +12,8 @@
 #import "SearchRequestStruct.h"
 #import "TicketsViewController.h"
 #import "TicketCollectionViewController.h"
+#import "ProgressView.h"
+#import "FirstViewController.h"
 #import "APIManager.h"
 
 @interface MainViewController ()<PlaceViewControllerDelegate>
@@ -88,22 +90,45 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataLoadSuccessfully) name:kDataManagerLoadDataDidComplete object: nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self presentFirstViewControllerNeeded];
+    
+    
+}
+
 - (void)searchButtonDidTap:(UIButton*)sender{
-    [[APIManager sharedInstance] ticketsWithRequest:self.searchRequest withCompletion:^(NSArray *tickets) {
-        if (tickets.count > 0) {
-            UICollectionViewFlowLayout* flowLayout = [UICollectionViewFlowLayout new];
-            TicketCollectionViewController *ticketsVC = [[TicketCollectionViewController alloc] initWithTickets: tickets andCollectionViewLayout: flowLayout];
-            [self.navigationController showViewController:ticketsVC sender:self];
-        } else {
-            UIAlertController* alertController =
-            [UIAlertController alertControllerWithTitle:@"Увы!"
-                                                message:@"По данному направлению билетов не найдено"
-                                         preferredStyle: UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
-                                                                style:UIAlertActionStyleDefault handler:nil]];
-            [self presentViewController:alertController animated:true completion:nil];
-        }
-    }];
+    if (_searchRequest.origin && _searchRequest.destionation) {
+        [[ProgressView sharedInstance] show:^{
+            [[APIManager sharedInstance]
+             ticketsWithRequest:self.searchRequest withCompletion:^(NSArray *tickets) {
+                 [[ProgressView sharedInstance] dismiss:^{
+                     if (tickets.count > 0) {
+                         TicketsViewController* ticketsVC = [[TicketsViewController alloc] initWithTickets:tickets];
+                         
+                         [self.navigationController pushViewController:ticketsVC animated:true];
+                     } else {
+                         UIAlertController* alertController =
+                         [UIAlertController alertControllerWithTitle:@"Увы!"
+                                                             message:@"По данному направлению билетов не найдено"
+                                                      preferredStyle: UIAlertControllerStyleAlert];
+                         [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
+                                                                             style:UIAlertActionStyleDefault handler:nil]];
+                         [self presentViewController:alertController animated:true completion:nil];
+                     }
+                 }];
+             }];
+        }];
+    } else {
+        UIAlertController* alertController =
+        [UIAlertController alertControllerWithTitle:@"Ошибка"
+                                            message:@"Необходимо указать место отправления и место прибытия"
+                                     preferredStyle: UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
+                                                            style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alertController animated:true completion:nil];
+    }
 }
 
 - (void)dataLoadSuccessfully {
@@ -114,7 +139,7 @@
 
 - (void)placeButtonDidTap:(UIButton*)sender{
     PlaceViewController* placeViewController;
-    if ([sender isEqual: self.departureButton]) {
+    if ([sender isEqual: _departureButton]) {
         placeViewController = [[PlaceViewController alloc] initWithType: PlaceTypeDeparture];
     } else {
         placeViewController = [[PlaceViewController alloc] initWithType: PlaceTypeArrival];
@@ -154,6 +179,15 @@
 
 - (void)loadDataComplete{
     self.view.backgroundColor = [UIColor yellowColor];
+}
+
+- (void)presentFirstViewControllerNeeded {
+    BOOL isFirstStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"first_start"];
+    if (!isFirstStart) {
+        FirstViewController* firstVC = [[FirstViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                                    options:nil];
+        [self presentViewController: firstVC animated: true completion: nil];
+    }
 }
 
 

@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "DataManager.h"
 #import "APIManager.h"
+@class TicketFavorite;
 
 @class Ticket;
+
 
 @interface TicketTVCell : UITableViewCell
 
 @property (nonatomic, strong) Ticket* ticket;
+@property (nonatomic, strong) TicketFavorite* favorite;
+@property (nonatomic, strong) UIImageView* airlineLogoView;
 
 @end

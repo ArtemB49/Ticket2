@@ -9,10 +9,11 @@
 #import "TicketTVCell.h"
 #import <YYWebImage/YYWebImage.h>
 #import "Ticket.h"
+#import "TicketFavorite+CoreDataClass.h"
 
 @interface TicketTVCell()
 
-@property (nonatomic, strong) UIImageView* airlineLogoView;
+//@property (nonatomic, strong) UIImageView* airlineLogoView;
 @property (nonatomic, strong) UILabel* priceLabel;
 @property (nonatomic, strong) UILabel* placesLabel;
 @property (nonatomic, strong) UILabel* dateLabel;
@@ -75,4 +76,19 @@
     [self.airlineLogoView yy_setImageWithURL:urlLogo options:YYWebImageOptionSetImageWithFadeAnimation];
     
 }
+
+- (void)setFavorite:(TicketFavorite *)favorite{
+    _favorite = favorite;
+    
+    _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", favorite.price];
+    _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", favorite.from, favorite.to];
+    
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"dd MMMM yyyy hh:mm";
+    self.dateLabel.text = [dateFormatter stringFromDate: favorite.departure];
+    NSURL *urlLogo = AirlineLogo(favorite.airline);
+    
+    [self.airlineLogoView yy_setImageWithURL:urlLogo options:YYWebImageOptionSetImageWithFadeAnimation];
+}
+
 @end

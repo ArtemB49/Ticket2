@@ -21,6 +21,14 @@
 		AE6B5A832030BDBD008224D9 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A822030BDBD008224D9 /* TabBarController.m */; };
 		AE6B5A872031DBC2008224D9 /* TicketCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A862031DBC2008224D9 /* TicketCollectionViewController.m */; };
 		AE6B5A8A2031ECC7008224D9 /* TicketCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5A892031ECC7008224D9 /* TicketCollectionViewCell.m */; };
+		AE6B5ABA2039BBB4008224D9 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5AB92039BBB4008224D9 /* CoreDataHelper.m */; };
+		AE6B5AF9203B1B69008224D9 /* baseair.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5AF7203B1B69008224D9 /* baseair.xcdatamodeld */; };
+		AE6B5B26203B2F2F008224D9 /* TicketFavorite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5B24203B2F2F008224D9 /* TicketFavorite+CoreDataClass.m */; };
+		AE6B5B27203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5B25203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.m */; };
+		AE6B5B2A203DD5E3008224D9 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5B29203DD5E3008224D9 /* ProgressView.m */; };
+		AE6B5B2D203DE7AE008224D9 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5B2C203DE7AE008224D9 /* ContentViewController.m */; };
+		AE6B5B30203DF3FC008224D9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5B2F203DF3FC008224D9 /* FirstViewController.m */; };
+		AE6B5B33203F0805008224D9 /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B5B32203F0805008224D9 /* NotificationCenter.m */; };
 		AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4A202AF31C00F8B9A8 /* Ticket.m */; };
 		AE83ED4E202B2CA600F8B9A8 /* TicketTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */; };
 		AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE83ED50202B440800F8B9A8 /* TicketsViewController.m */; };
@@ -61,6 +69,21 @@
 		AE6B5A862031DBC2008224D9 /* TicketCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketCollectionViewController.m; sourceTree = "<group>"; };
 		AE6B5A882031ECC7008224D9 /* TicketCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketCollectionViewCell.h; sourceTree = "<group>"; };
 		AE6B5A892031ECC7008224D9 /* TicketCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketCollectionViewCell.m; sourceTree = "<group>"; };
+		AE6B5AB82039BBB4008224D9 /* CoreDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		AE6B5AB92039BBB4008224D9 /* CoreDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		AE6B5AF8203B1B69008224D9 /* baseair.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = baseair.xcdatamodel; sourceTree = "<group>"; };
+		AE6B5B22203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketFavorite+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AE6B5B23203B2F2F008224D9 /* TicketFavorite+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketFavorite+CoreDataClass.h"; sourceTree = "<group>"; };
+		AE6B5B24203B2F2F008224D9 /* TicketFavorite+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TicketFavorite+CoreDataClass.m"; sourceTree = "<group>"; };
+		AE6B5B25203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TicketFavorite+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AE6B5B28203DD5E3008224D9 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		AE6B5B29203DD5E3008224D9 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		AE6B5B2B203DE7AE008224D9 /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		AE6B5B2C203DE7AE008224D9 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		AE6B5B2E203DF3FC008224D9 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		AE6B5B2F203DF3FC008224D9 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AE6B5B31203F0805008224D9 /* NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
+		AE6B5B32203F0805008224D9 /* NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 		AE83ED49202AF31C00F8B9A8 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		AE83ED4A202AF31C00F8B9A8 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		AE83ED4C202B2CA600F8B9A8 /* TicketTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketTVCell.h; sourceTree = "<group>"; };
@@ -137,9 +160,11 @@
 		AE6B5A76202F21B4008224D9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AE6B5AB02039BA2A008224D9 /* CoreData */,
 				AE6B5A77202F21D7008224D9 /* Location */,
 				AC02CFA4F9949F0B8988C6FB /* DataManager */,
 				AE864854202AD57C00D72B37 /* API */,
+				AE6B5B34203F0811008224D9 /* Notification */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -151,6 +176,29 @@
 				AE6B5A79202F21F6008224D9 /* LocationService.m */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		AE6B5AB02039BA2A008224D9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B5B23203B2F2F008224D9 /* TicketFavorite+CoreDataClass.h */,
+				AE6B5B24203B2F2F008224D9 /* TicketFavorite+CoreDataClass.m */,
+				AE6B5B22203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.h */,
+				AE6B5B25203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.m */,
+				AE6B5AB82039BBB4008224D9 /* CoreDataHelper.h */,
+				AE6B5AB92039BBB4008224D9 /* CoreDataHelper.m */,
+				AE6B5AF7203B1B69008224D9 /* baseair.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AE6B5B34203F0811008224D9 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B5B31203F0805008224D9 /* NotificationCenter.h */,
+				AE6B5B32203F0805008224D9 /* NotificationCenter.m */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		AE86484C2026413700D72B37 /* Data */ = {
@@ -179,6 +227,10 @@
 				AE6B5A822030BDBD008224D9 /* TabBarController.m */,
 				AE6B5A852031DBC2008224D9 /* TicketCollectionViewController.h */,
 				AE6B5A862031DBC2008224D9 /* TicketCollectionViewController.m */,
+				AE6B5B2B203DE7AE008224D9 /* ContentViewController.h */,
+				AE6B5B2C203DE7AE008224D9 /* ContentViewController.m */,
+				AE6B5B2E203DF3FC008224D9 /* FirstViewController.h */,
+				AE6B5B2F203DF3FC008224D9 /* FirstViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +257,8 @@
 				AE83ED4D202B2CA600F8B9A8 /* TicketTVCell.m */,
 				AE6B5A882031ECC7008224D9 /* TicketCollectionViewCell.h */,
 				AE6B5A892031ECC7008224D9 /* TicketCollectionViewCell.m */,
+				AE6B5B28203DD5E3008224D9 /* ProgressView.h */,
+				AE6B5B29203DD5E3008224D9 /* ProgressView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +347,7 @@
 				TargetAttributes = {
 					AE9D79242023423B00CE8AE8 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -394,16 +449,24 @@
 				AE9D79382023423C00CE8AE8 /* main.m in Sources */,
 				AE6B5A8A2031ECC7008224D9 /* TicketCollectionViewCell.m in Sources */,
 				AE9D79462023487400CE8AE8 /* PlaceViewController.m in Sources */,
+				AE6B5B30203DF3FC008224D9 /* FirstViewController.m in Sources */,
 				AE9D792A2023423B00CE8AE8 /* AppDelegate.m in Sources */,
 				AE6B5A7D202F270C008224D9 /* MapPrice.m in Sources */,
 				AE6B5A872031DBC2008224D9 /* TicketCollectionViewController.m in Sources */,
 				AE39EBAE20238E32004D1D56 /* Country.m in Sources */,
 				AE3965F220239FA900816595 /* Airport.m in Sources */,
 				AE6B5A80202F411F008224D9 /* MapViewController.m in Sources */,
+				AE6B5B33203F0805008224D9 /* NotificationCenter.m in Sources */,
+				AE6B5ABA2039BBB4008224D9 /* CoreDataHelper.m in Sources */,
 				AE3965EF2023903100816595 /* City.m in Sources */,
 				AE83ED51202B440800F8B9A8 /* TicketsViewController.m in Sources */,
+				AE6B5AF9203B1B69008224D9 /* baseair.xcdatamodeld in Sources */,
+				AE6B5B2A203DD5E3008224D9 /* ProgressView.m in Sources */,
 				AE8648522026E63C00D72B37 /* PlaceTVCell.m in Sources */,
 				AC02CE8C3849B6C10464CD2F /* DataManager.m in Sources */,
+				AE6B5B26203B2F2F008224D9 /* TicketFavorite+CoreDataClass.m in Sources */,
+				AE6B5B2D203DE7AE008224D9 /* ContentViewController.m in Sources */,
+				AE6B5B27203B2F2F008224D9 /* TicketFavorite+CoreDataProperties.m in Sources */,
 				AE864857202AD5AA00D72B37 /* APIManager.m in Sources */,
 				AE83ED4B202AF31C00F8B9A8 /* Ticket.m in Sources */,
 			);
@@ -540,12 +603,16 @@
 			baseConfigurationReference = E709FDF8AD3027AE635EF96C /* Pods-Ticket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY58N6J6Q3;
 				INFOPLIST_FILE = Ticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.Ticket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ticket/Service/CoreData/Ticket-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -555,12 +622,15 @@
 			baseConfigurationReference = 91C78A67492C9923D72FD25A /* Pods-Ticket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY58N6J6Q3;
 				INFOPLIST_FILE = Ticket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Main.Ticket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ticket/Service/CoreData/Ticket-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -587,6 +657,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE6B5AF7203B1B69008224D9 /* baseair.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE6B5AF8203B1B69008224D9 /* baseair.xcdatamodel */,
+			);
+			currentVersion = AE6B5AF8203B1B69008224D9 /* baseair.xcdatamodel */;
+			path = baseair.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AE9D791D2023423B00CE8AE8 /* Project object */;
 }

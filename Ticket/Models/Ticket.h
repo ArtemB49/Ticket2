@@ -20,5 +20,13 @@
 @property (nonatomic, strong) NSString *to;
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
+- (instancetype)price:(NSNumber*)price
+              airline:(NSString*)air
+            departure:(NSDate*)dep
+              expires:(NSDate*)exp
+         flightNumber:(NSNumber*)num
+               returnD:(NSDate*)ret
+                 from:(NSString*)from
+                   to:(NSString*)to;
 
 @end

@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "MapViewController.h"
 #import "TicketCollectionViewController.h"
+#import "TicketsViewController.h"
 
 @interface TabBarController ()
 
@@ -27,8 +28,10 @@
 }
 
 - (NSArray<UIViewController*>*)createViewController {
+
     NSMutableArray<UIViewController*>* controllers = [NSMutableArray new];
     
+//  Куда-Откуда
     MainViewController* mainViewController = [MainViewController new];
     mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Поиск"
                                                                   image: [UIImage imageNamed: @"search"]
@@ -37,11 +40,19 @@
                                                  initWithRootViewController:mainViewController];
     [controllers addObject: mainNacController];
     
+//    Карта цен
     MapViewController* mapVC = [MapViewController new];
     mapVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта цен" image:[UIImage imageNamed:@"map"] selectedImage:[UIImage imageNamed:@"map_selected"]];
     UINavigationController* mapNavController = [[UINavigationController alloc] initWithRootViewController: mapVC];
     [controllers addObject: mapNavController];
-    
+
+//    Избранное
+    TicketsViewController *favoriteTicketVC = [[TicketsViewController alloc] initFavoriteTicketsController];
+    favoriteTicketVC.tabBarItem = [[UITabBarItem alloc] initWithTitle: @"Избранное"
+                                                                image:[UIImage imageNamed:@"favorite"]
+                                                        selectedImage:[UIImage imageNamed:@"favorite_selected"]];
+    UINavigationController *favoriteNavController = [[UINavigationController alloc] initWithRootViewController: favoriteTicketVC];
+    [controllers addObject: favoriteNavController];
 
     
     return controllers;
