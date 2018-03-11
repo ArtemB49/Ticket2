@@ -22,11 +22,24 @@
         if (coords && ![coords isEqual:[NSNull null]]){
             NSNumber *lon = [coords valueForKey:@"lon"];
             NSNumber *lat = [coords valueForKey:@"lat"];
-            if (![lon isEqual:[NSNull null]] && ![lat isEqual:[NSNull null]]){}
-            self.coordinate = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
+            if (![lon isEqual:[NSNull null]] && ![lat isEqual:[NSNull null]]){
+                self.coordinate = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
+            }
         }
+        [self localizeName];
     }
     return self;
+}
+
+- (void)localizeName {
+    if (!_translations) return;
+    NSLocale * locale = [NSLocale currentLocale];
+    NSString * localeID = [locale.localeIdentifier substringToIndex: 2];
+    if (localeID) {
+        if ([_translations valueForKey:localeID]) {
+            self.name = [_translations valueForKey: localeID];
+        }
+    }
 }
 
 @end

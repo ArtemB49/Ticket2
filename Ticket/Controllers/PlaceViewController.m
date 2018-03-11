@@ -12,6 +12,11 @@
 
 #define ReuseIdentifier @"CellIdentifier"
 
+#define FROM_TITLE NSLocalizedString(@"main_from", nil)
+#define TO_TITLE NSLocalizedString(@"main_to", nil)
+#define AIRPORTS_SEGMENT NSLocalizedString(@"place_airports", nil)
+#define CITIES_SEGMENT NSLocalizedString(@"place_cities", nil)
+
 @interface PlaceViewController ()<UISearchResultsUpdating>
 
 @property (nonatomic) PlaceType placeType;
@@ -53,7 +58,7 @@
     }
     [self.view addSubview: self.tableView];
     
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems: @[@"Города", @"Аэропорты"]];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems: @[CITIES_SEGMENT, AIRPORTS_SEGMENT]];
     [self.segmentedControl addTarget:self action:@selector(changeSource) forControlEvents:UIControlEventValueChanged];
     self.segmentedControl.tintColor = [UIColor blackColor];
     self.navigationItem.titleView = self.segmentedControl;
@@ -61,9 +66,9 @@
     [self changeSource];
     
     if (self.placeType == PlaceTypeDeparture) {
-        self.title = @"Откуда";
+        self.title = FROM_TITLE;
     } else {
-        self.title = @"Куда";
+        self.title = TO_TITLE;
     }
 }
 

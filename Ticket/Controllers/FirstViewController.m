@@ -11,6 +11,17 @@
 
 #define CONTENT_COUNT 4
 
+#define ABOUT_APP_HEAD NSLocalizedString(@"about_app_header", nil)
+#define TICKETS_HEAD NSLocalizedString(@"tickets_header", nil)
+#define MAP_HEAD NSLocalizedString(@"map_price_header", nil)
+#define FAVORITES_HEAD NSLocalizedString(@"favorites_header", nil)
+#define ABOUT_APP_DES NSLocalizedString(@"about_app_describle", nil)
+#define TICKETS_DES NSLocalizedString(@"tickets_describle", nil)
+#define MAP_DES NSLocalizedString(@"map_price_describle", nil)
+#define FAVORITES_DES NSLocalizedString(@"favorites_desrible", nil)
+#define NEXT_BTN NSLocalizedString(@"next_button", nil)
+#define DONE_BTN NSLocalizedString(@"done_button", nil)
+
 @interface FirstViewController ()
 
 @property (nonatomic, strong) UIButton* nextButton;
@@ -65,11 +76,20 @@
 }
 
 - (void)createContentDataArray {
-    NSArray* titles = [NSArray arrayWithObjects:@"О ПРИЛОЖЕНИИ", @"АВИАБИЛЕТЫ", @"КАРТА ЦЕН", @"ИЗБРАННОЕ", nil];
-    NSArray* contents = [NSArray arrayWithObjects:@"Приложение для поиска авиабилетов",
-                         @"Находите самые дешевые авиабилеты",
-                         @"Просматривайте карту цен",
-                         @"Сохраняйте выбранные билеты в избранное", nil];
+    NSArray* titles = [NSArray arrayWithObjects:
+                       ABOUT_APP_HEAD,
+                       TICKETS_HEAD,
+                       MAP_HEAD,
+                       FAVORITES_HEAD,
+                       nil];
+    
+    NSArray* contents = [NSArray arrayWithObjects:
+                         ABOUT_APP_DES,
+                         TICKETS_DES,
+                         MAP_DES,
+                         FAVORITES_DES,
+                         nil];
+    
     for (int i = 0; i < 4; ++i) {
         contentData[i].title = [titles objectAtIndex:i];
         contentData[i].contentText = [contents objectAtIndex:i];
@@ -95,11 +115,11 @@
         case 0:
         case 1:
         case 2:
-            [_nextButton setTitle:@"ДАЛЕЕ" forState:UIControlStateNormal];
+            [_nextButton setTitle: NEXT_BTN forState:UIControlStateNormal];
             _nextButton.tag = 0;
             break;
         case 3:
-            [_nextButton setTitle:@"Готово" forState:UIControlStateNormal];
+            [_nextButton setTitle: DONE_BTN forState:UIControlStateNormal];
             _nextButton.tag = 1;
         default:
             break;

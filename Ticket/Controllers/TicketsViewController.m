@@ -15,6 +15,18 @@
 
 #define TicketCellReuseIdentifier @"TicketCellIdentifier"
 
+#define FAVORITE_TITLE NSLocalizedString(@"tickets_title", nil)
+#define BACK_BTN NSLocalizedString(@"back_button", nil)
+#define ACTIONS_TITLE NSLocalizedString(@"actions_with_tickets", nil)
+#define ACTIONS_MESSAGE NSLocalizedString(@"actions_with_tickets_describle", nil)
+#define DELETE_FAVORITE NSLocalizedString(@"remove_from_favorite", nil)
+#define ADD_FAVORITE NSLocalizedString(@"add_to_favorite", nil)
+#define CLOSE_BTN NSLocalizedString(@"close", nil)
+#define REMIND NSLocalizedString(@"remind_me", nil)
+#define REMINDER NSLocalizedString(@"ticket_reminder", nil)
+#define NOTIFICATION NSLocalizedString(@"notification_will_be_sent", nil)
+#define SUCCESS NSLocalizedString(@"success", nil)
+
 @interface TicketsViewController ()
 
 @property (nonatomic, strong) NSArray* tickets;
@@ -33,7 +45,7 @@
     if (self) {
         isFavorites = true;
         self.tickets = [NSArray new];
-        self.title = @"Избранное";
+        self.title = FAVORITE_TITLE;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.tableView registerClass:[TicketTVCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
         self.navigationController.navigationBar.tintColor = [UIColor blackColor];
@@ -46,12 +58,12 @@
     self = [super init];
     if (self) {
         self.tickets = tickets;
-        self.title = @"Билеты";
+        self.title = FAVORITE_TITLE;
         [self.navigationController setNavigationBarHidden:false animated:true];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.tableView registerClass:[TicketTVCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
         self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-        UIBarButtonItem *newBtn = [[UIBarButtonItem alloc] initWithTitle:@"Назад" style:UIBarButtonItemStylePlain  target: self action:@selector(backButtonDidTap:)];
+        UIBarButtonItem *newBtn = [[UIBarButtonItem alloc] initWithTitle: BACK_BTN style:UIBarButtonItemStylePlain  target: self action:@selector(backButtonDidTap:)];
         self.navigationItem.leftItemsSupplementBackButton = true;
         self.navigationItem.backBarButtonItem = newBtn;
         self.navigationController.navigationBar.prefersLargeTitles = true;
@@ -124,19 +136,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (isFavorites) return;
     UIAlertController *alertController
-    = [UIAlertController alertControllerWithTitle:@"Действия с билетом"
-                                          message:@"Что необходимо сделать с выбранным билетом?"
+    = [UIAlertController alertControllerWithTitle:ACTIONS_TITLE
+                                          message:ACTIONS_MESSAGE
                                    preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction* favoriteAction;
     if ([[CoreDataHelper sharedInstance] isFavorite:[_tickets objectAtIndex:indexPath.row]]){
-        favoriteAction = [UIAlertAction actionWithTitle:@"Удалить из избранного"
+        favoriteAction = [UIAlertAction actionWithTitle:DELETE_FAVORITE
                                                   style:UIAlertActionStyleDestructive
                                                 handler:^(UIAlertAction * _Nonnull action) {
                                                     [[CoreDataHelper sharedInstance]
                                                      removeFromFavorite: [_tickets objectAtIndex:indexPath.row]];
                                                 }];
     } else {
-        favoriteAction = [UIAlertAction actionWithTitle:@"Добавить в избранное"
+        favoriteAction = [UIAlertAction actionWithTitle:ADD_FAVORITE
                                                   style:UIAlertActionStyleDefault
                                                 handler:^(UIAlertAction * _Nonnull action) {
                                                     [[CoreDataHelper sharedInstance]
@@ -144,12 +156,12 @@
                                                 }];
     }
     
-    UIAlertAction* notificationAction = [UIAlertAction actionWithTitle:@"Напомнить" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction* notificationAction = [UIAlertAction actionWithTitle:REMIND style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
         notificationCell = [tableView cellForRowAtIndexPath:indexPath];
         [_dateTextField becomeFirstResponder];
     }];
     
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Закрыть"
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:CLOSE_BTN
                                                            style:UIAlertActionStyleCancel
                                                          handler:nil];
     [alertController addAction: favoriteAction];
@@ -175,11 +187,11 @@
             imageURL = [NSURL fileURLWithPath: path];
         }
         
-        Notification notification = NotificationMake(@"Напоминание о билете", message, _datePicker.date, imageURL);
+        Notification notification = NotificationMake(REMINDER, message, _datePicker.date, imageURL);
         [[NotificationCenter sharedInstance] sendNotification: notification];
         
-        UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Успешно" message: [NSString stringWithFormat: @"Уведомление будет отправленно - %@", _datePicker.date] preferredStyle:(UIAlertControllerStyleAlert)] ;
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertController * alertController = [UIAlertController alertControllerWithTitle: SUCCESS message: [NSString stringWithFormat: @"%@ - %@", NOTIFICATION, _datePicker.date] preferredStyle:(UIAlertControllerStyleAlert)] ;
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:CLOSE_BTN style:UIAlertActionStyleCancel handler:nil];
         [alertController addAction:cancelAction];
         [self presentViewController: alertController animated: true completion:nil];
     }

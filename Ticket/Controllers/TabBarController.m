@@ -12,6 +12,10 @@
 #import "TicketCollectionViewController.h"
 #import "TicketsViewController.h"
 
+#define SEARCH_TAB NSLocalizedString(@"search_tab", nil)
+#define MAP_TAB NSLocalizedString(@"map_tab", nil)
+#define FAVORITE_TAB NSLocalizedString(@"favorites_tab", nil)
+
 @interface TabBarController ()
 
 @end
@@ -33,7 +37,7 @@
     
 //  Куда-Откуда
     MainViewController* mainViewController = [MainViewController new];
-    mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Поиск"
+    mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle: SEARCH_TAB
                                                                   image: [UIImage imageNamed: @"search"]
                                                           selectedImage: [UIImage imageNamed: @"search_selected"]];
     UINavigationController* mainNacController = [[UINavigationController alloc]
@@ -42,13 +46,13 @@
     
 //    Карта цен
     MapViewController* mapVC = [MapViewController new];
-    mapVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта цен" image:[UIImage imageNamed:@"map"] selectedImage:[UIImage imageNamed:@"map_selected"]];
+    mapVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:MAP_TAB image:[UIImage imageNamed:@"map"] selectedImage:[UIImage imageNamed:@"map_selected"]];
     UINavigationController* mapNavController = [[UINavigationController alloc] initWithRootViewController: mapVC];
     [controllers addObject: mapNavController];
 
 //    Избранное
     TicketsViewController *favoriteTicketVC = [[TicketsViewController alloc] initFavoriteTicketsController];
-    favoriteTicketVC.tabBarItem = [[UITabBarItem alloc] initWithTitle: @"Избранное"
+    favoriteTicketVC.tabBarItem = [[UITabBarItem alloc] initWithTitle: FAVORITE_TAB
                                                                 image:[UIImage imageNamed:@"favorite"]
                                                         selectedImage:[UIImage imageNamed:@"favorite_selected"]];
     UINavigationController *favoriteNavController = [[UINavigationController alloc] initWithRootViewController: favoriteTicketVC];

@@ -1,0 +1,64 @@
+/* 
+  Localizable.strings
+  Ticket
+
+  Created by Артем Б on 11.03.2018.
+  Copyright © 2018 Артем Б. All rights reserved.
+*/
+
+
+// TabBarConrtoller
+
+"search_tab" = "Searh";
+"map_tab" = "Map of prices";
+"favorites_tab" = "Favorite";
+
+
+// MainViewController
+
+"main_from" = "From";
+"main_to" = "To";
+"main_search" = "Find";
+
+
+// PlacwViewController
+
+"place_airports" = "Airports";
+"place_cities" = "Cities";
+
+// FirstViewController
+
+"about_app_header" = "ABOUT APP";
+"tickets_header" = "AIR TICKETS";
+"map_price_header" = "MAP OF PRICES";
+"favorites_header" = "FAVORITES";
+"about_app_describle" = "App for the search air tickets";
+"tickets_describle" = "Find the most cheap air tickets";
+"map_price_describle" = "View a map of prices";
+"favorites_desrible" = "Save a selected tickets in the favorites";
+
+"next_button" = "NEXT";
+"done_button" = "DONE";
+
+//TickesViewController
+
+"tickets_title" = "Tickets";
+"add_to_favorite" = "Add to favorites";
+"back_button" = "Back";
+"remove_from_favorite" = "Remove from favorites";
+"remind_me" = "Remind";
+"ticket_remonder" = "Ticket's reminder";
+"notification_will_be_sent" = "Notification will be sent";
+"success" = "Success";
+
+
+//Alerts
+
+"error" = "Error";
+"opps" = "Opps";
+"tickets_not_found" = "Tickets not found";
+"close" = "Close";
+"not_set_place_arrival_or_departure" = "Need to set a place arrival or departure";
+"actions_with_tickets" = "Actions with tickets";
+"actions_with_tickets_describle" = "What do you want to take with selected tickets?";
+"not_determine_current_city" = "Not determine a current city!";

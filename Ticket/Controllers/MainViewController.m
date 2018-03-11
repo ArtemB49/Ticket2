@@ -16,6 +16,16 @@
 #import "FirstViewController.h"
 #import "APIManager.h"
 
+#define SEARCH_TITLE NSLocalizedString(@"search_tab", nil)
+#define FROM_BTN NSLocalizedString(@"main_from", nil)
+#define TO_BTN NSLocalizedString(@"main_to", nil)
+#define FIND_BTN NSLocalizedString(@"main_search", nil)
+#define OPPS_ALERT_TITLE NSLocalizedString(@"opps", nil)
+#define TICKETS_NOT_FOUND NSLocalizedString(@"tickets_not_found", nil)
+#define CLOSE_BTN NSLocalizedString(@"close", nil)
+#define ERROR_ALERT_TITLE NSLocalizedString(@"error", nil)
+#define MESSAGE_NOT_SET_PLACE NSLocalizedString(@"not_set_place_arrival_or_departure", nil)
+
 @interface MainViewController ()<PlaceViewControllerDelegate>
 
 @property (nonatomic, strong) UIView* placeContainerView;
@@ -35,7 +45,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.prefersLargeTitles = true;
-    self.title = @"Поиск";
+    self.title = SEARCH_TITLE;
     
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     
@@ -48,7 +58,7 @@
     self.placeContainerView.layer.cornerRadius = 6.0;
     
     self.departureButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.departureButton setTitle:@"Откуда" forState:UIControlStateNormal];
+    [self.departureButton setTitle: FROM_BTN forState:UIControlStateNormal];
     self.departureButton.tintColor = [UIColor blackColor];
     self.departureButton.frame = CGRectMake(
                                             10.0,
@@ -62,7 +72,7 @@
     [self.placeContainerView addSubview:self.departureButton];
     
     self.arrivalButton = [UIButton buttonWithType: UIButtonTypeSystem];
-    [self.arrivalButton setTitle:@"Куда" forState: UIControlStateNormal];
+    [self.arrivalButton setTitle:TO_BTN forState: UIControlStateNormal];
     self.arrivalButton.tintColor = [UIColor blackColor];
     self.arrivalButton.frame = CGRectMake(
                                           10.0,
@@ -78,7 +88,7 @@
     [self.view addSubview:self.placeContainerView];
     
     self.searchButton = [UIButton buttonWithType: UIButtonTypeSystem];
-    [self.searchButton setTitle:@"Найти" forState: UIControlStateNormal];
+    [self.searchButton setTitle:FIND_BTN forState: UIControlStateNormal];
     self.searchButton.tintColor = [UIColor whiteColor];
     self.searchButton.frame = CGRectMake(30.0, CGRectGetMaxY(self.placeContainerView.frame) + 30, screenWidth -60.0, 60.0);
     self.searchButton.backgroundColor = [UIColor blackColor];
@@ -110,10 +120,10 @@
                          [self.navigationController pushViewController:ticketsVC animated:true];
                      } else {
                          UIAlertController* alertController =
-                         [UIAlertController alertControllerWithTitle:@"Увы!"
-                                                             message:@"По данному направлению билетов не найдено"
+                         [UIAlertController alertControllerWithTitle:OPPS_ALERT_TITLE
+                                                             message:TICKETS_NOT_FOUND
                                                       preferredStyle: UIAlertControllerStyleAlert];
-                         [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
+                         [alertController addAction:[UIAlertAction actionWithTitle:CLOSE_BTN
                                                                              style:UIAlertActionStyleDefault handler:nil]];
                          [self presentViewController:alertController animated:true completion:nil];
                      }
@@ -122,10 +132,10 @@
         }];
     } else {
         UIAlertController* alertController =
-        [UIAlertController alertControllerWithTitle:@"Ошибка"
-                                            message:@"Необходимо указать место отправления и место прибытия"
+        [UIAlertController alertControllerWithTitle:ERROR_ALERT_TITLE
+                                            message:MESSAGE_NOT_SET_PLACE
                                      preferredStyle: UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
+        [alertController addAction:[UIAlertAction actionWithTitle:CLOSE_BTN
                                                             style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alertController animated:true completion:nil];
     }

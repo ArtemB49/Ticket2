@@ -12,6 +12,8 @@
 #import "City.h"
 #import "MapPrice.h"
 
+#define MAP_TAB NSLocalizedString(@"map_tab", nil)
+
 @interface MapViewController ()<MKMapViewDelegate>
 
 @property (nonatomic, strong) MKMapView* mapView;
@@ -26,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Карта цен";
+    self.title = MAP_TAB;
     _mapView = [[MKMapView alloc] initWithFrame: self.view.bounds];
     _mapView.showsUserLocation = true;
     _mapView.delegate = self;
