@@ -36,6 +36,7 @@
 
 //TickesViewController
 
+"favorite_tickets_title" = "Избранное";
 "tickets_title" = "Билеты";
 "add_to_favorite" = "Добавить в избранное";
 "back_button" = "Назад";

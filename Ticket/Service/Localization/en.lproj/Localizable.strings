@@ -9,7 +9,7 @@
 
 // TabBarConrtoller
 
-"search_tab" = "Searh";
+"search_tab" = "Search";
 "map_tab" = "Map of prices";
 "favorites_tab" = "Favorite";
 
@@ -42,6 +42,7 @@
 
 //TickesViewController
 
+"favorite_tickets_title" = "Favorites";
 "tickets_title" = "Tickets";
 "add_to_favorite" = "Add to favorites";
 "back_button" = "Back";

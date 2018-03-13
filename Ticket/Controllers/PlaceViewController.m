@@ -72,6 +72,11 @@
     }
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self dismissSearch];
+}
+
 - (void)changeSource {
     switch (self.segmentedControl.selectedSegmentIndex) {
         case 0:
@@ -86,6 +91,10 @@
     }
     
     [self.tableView reloadData];
+}
+
+- (void)dismissSearch {
+    [_searchController dismissViewControllerAnimated:true completion:nil];
 }
 
 #pragma mark - TableViewDataSource

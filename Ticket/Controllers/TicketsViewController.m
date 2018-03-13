@@ -15,7 +15,8 @@
 
 #define TicketCellReuseIdentifier @"TicketCellIdentifier"
 
-#define FAVORITE_TITLE NSLocalizedString(@"tickets_title", nil)
+#define TITLE NSLocalizedString(@"tickets_title", nil)
+#define FAVORITE_TITLE NSLocalizedString(@"favorite_tickets_title", nil)
 #define BACK_BTN NSLocalizedString(@"back_button", nil)
 #define ACTIONS_TITLE NSLocalizedString(@"actions_with_tickets", nil)
 #define ACTIONS_MESSAGE NSLocalizedString(@"actions_with_tickets_describle", nil)
@@ -58,7 +59,7 @@
     self = [super init];
     if (self) {
         self.tickets = tickets;
-        self.title = FAVORITE_TITLE;
+        self.title = TITLE;
         [self.navigationController setNavigationBarHidden:false animated:true];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.tableView registerClass:[TicketTVCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
@@ -95,12 +96,22 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
+    NSLog(@"viewDidAppear");
     if (isFavorites) {
         self.navigationController.navigationBar.prefersLargeTitles = true;
         _tickets = [[CoreDataHelper sharedInstance] favorites];
         [self.tableView reloadData];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+     NSLog(@"viewWillAppear");
+    if (!isFavorites) [self.navigationController setNavigationBarHidden:false animated:true];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+     NSLog(@"viewWillDisappear");
+    if (!isFavorites) [self.navigationController setNavigationBarHidden:true animated:true];
 }
 
 - (void)backButtonDidTap:(UIBarButtonItem*)sender{
